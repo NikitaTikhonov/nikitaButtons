@@ -1,0 +1,27 @@
+{
+  "name": "my_buttons",
+  "version": "1.0.0",
+  "description": "My buttons library",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "pub": "npm version patch && npm publish --registry http://localhost:4873/",
+    "lint": "tslint --fix -p ./tsconfig.json"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": "https://github.com/NikitaTikhonov/nikitaButtons",
+  "author": "Nikita Tikhonov",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^4.7.2",
+    "@types/react-native": "^0.66.15"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-native": "0.67.2"
+  }
+}
