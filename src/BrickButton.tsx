@@ -3,17 +3,20 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
+  ImageSourcePropType,
 } from "react-native";
 
 interface Props {
   text: string;
   onPress: () => void;
+  brickImage?: ImageSourcePropType;
 }
-export const BrickButton = ({ text, onPress }: Props) => {
+export const BrickButton = ({ text, onPress, brickImage }: Props) => {
+  const brick = brickImage ?? { uri: "https://i.ibb.co/DKGFttj/brick.jpg" };
   return (
     <TouchableOpacity onPress={onPress} style={style.main}>
       <ImageBackground
-        source={require("./assets/brick.jpg")}
+        source={brick}
         style={{
           flex: 1,
           aspectRatio: 2 / 1,
